@@ -5,6 +5,12 @@ import java.util.List;
 
 /**
  * @author Happy Indra Wijaya
+ *
+ * - Iterable is parent of all collection, except Map
+ * - Iterable is simple, it just for supporting for-each loop
+ * - for-each work with Iterator helped
+ * - Iterator is only how you access the element sequentially
+ *
  */
 public class IterableApp {
 
