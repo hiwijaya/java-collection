@@ -128,10 +128,28 @@ public class ListApp {
 
     }
 
+    private void immutableList() {
+
+        Player player = new Player(3, "Dwayne Wade");
+        player.addSkill("3 point");
+        player.addSkill("ball handling");
+
+        var skills = player.getSkills();
+
+        unwantedListOperation(skills);
+
+        System.out.println(skills);
+    }
+
+    private void unwantedListOperation(List<String> list){
+        list.add("rebound");    // raised an exception
+    }
+
     public static void main(String[] args) {
 
         ListApp app = new ListApp();
-        app.arrayList();
-        app.linkedList();
+//        app.arrayList();
+//        app.linkedList();
+        app.immutableList();
     }
 }

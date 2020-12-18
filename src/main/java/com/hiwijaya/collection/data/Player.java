@@ -1,5 +1,8 @@
 package com.hiwijaya.collection.data;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -10,9 +13,12 @@ public class Player implements Comparable<Player>{
     private int number;
     private String name;
 
+    private List<String> skills;
+
     public Player(int number, String name) {
         this.number = number;
         this.name = name;
+        this.skills = new ArrayList<>();
     }
 
     public int getNumber() {
@@ -29,6 +35,14 @@ public class Player implements Comparable<Player>{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<String> getSkills() {
+        return Collections.unmodifiableList(this.skills);   // return Immutable list
+    }
+
+    public void addSkill(String skill) {
+        this.skills.add(skill);
     }
 
     @Override
