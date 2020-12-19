@@ -68,6 +68,6 @@ public class Player implements Comparable<Player>{
 
     @Override
     public int compareTo(Player other) {
-        return this.name.compareTo(other.name);     // sorted asc
+        return other.getNumber() - this.getNumber();     // sorted desc by number
     }
 }
