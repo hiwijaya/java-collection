@@ -124,7 +124,7 @@ public class MapApp {
 
     private void enumMap(){
 
-        Map<Role, String> map = new EnumMap<Role, String>(Role.class);
+        Map<Role, String> map = new EnumMap<>(Role.class);
         map.put(Role.USER, "user");
         map.put(Role.ADMIN, "admin");
 
