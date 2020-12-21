@@ -132,7 +132,19 @@ public class MapApp {
             System.out.println(map.get(key));
         }
 
+    }
 
+    private void immutableMap(){
+
+        Map<String, String> empty = Collections.emptyMap();
+        Map<String, String> single = Collections.singletonMap("username", "hiwijaya");
+
+        Map<String, String> immutable = Map.of(
+                "name", "Happy",
+                "gender", "male"
+        );
+
+        immutable.put("nationality", "Indonesia");      // raised an exception
 
     }
 
@@ -143,7 +155,8 @@ public class MapApp {
 //        app.weakHashMap();
 //        app.identityHashMap();
 //        app.linkedHashMap();
-        app.enumMap();
+//        app.enumMap();
+        app.immutableMap();
     }
 
 }
